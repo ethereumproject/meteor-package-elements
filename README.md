@@ -2,7 +2,7 @@
 
 A collection of basic Meteor templates/components to make dapps faster to build.
 
-Its recommended to use these elements along with the [Ðapp styles](https://github.com/ethereum/dapp-styles).
+Its recommended to use these elements along with the [Ðapp styles](https://github.com/ethereumproject/dapp-styles).
 
 You can find a [demo here](http://ethereum-elements.meteor.com).
 
@@ -16,7 +16,7 @@ The following elements can be use anywhere in your dapp.
 
 Additionally this package exposes the following packages:
 
-- [ethereum:tools](https://atmospherejs.com/ethereum/tools), which gives you `EthTools`.
+- [ethereum:tools](https://atmospherejs.com/ethereumproject/tools), which gives you `EthTools`.
 - [frozeman:template-var](https://atmospherejs.com/frozeman/template-var), which gives you the `TemplateVar.set()/.get()` functions which can be used to get values from the select account, or address input element.
 
 Note that these packages will only be exposed to your client part of your dapp,
@@ -26,7 +26,7 @@ if you want to use e.g. `EthTools` on the server side add the package manually u
 
 ### Identicon
 
-![identicon](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/identicon.png)
+![identicon](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/identicon.png)
 
 Shows an identicon.
 
@@ -47,7 +47,7 @@ Additionally you can provide a URL, which the identicon will link to.
 
 ### Address Input
 
-![addressInput](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/addressInput.png)
+![addressInput](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/addressInput.png)
 
 Creates a input field, with an identicon, which will change based on the input value.
 
@@ -90,7 +90,7 @@ TemplateVar.getFrom('.my-container-element .dapp-address-input', 'value');
 
 ### Data Textarea
 
-![dataTextarea](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/dataTextarea.png)
+![dataTextarea](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/dataTextarea.png)
 
 Creates a textarea field, which only accepts HEX data as input.
 
@@ -134,8 +134,8 @@ TemplateVar.getFrom('.my-container-element .dapp-data-textarea', 'value');
 
 ### Select account
 
-![select account](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectAccount.png)
-![select account clicked](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectAccount1.png)
+![select account](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/selectAccount.png)
+![select account clicked](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/selectAccount1.png)
 
 
 Creates a select, which can allow to select accounts. The provided array needs to have at least the follwing properties:
@@ -158,7 +158,7 @@ var myAccounts = [{
 {{> dapp_selectAccount accounts=myAccounts}}
 ```
 
-This element works also well with the [ethereum:accounts](https://atmospherejs.com/ethereum/accounts) package, which provides you with `EthAccounts.find().fetch()` to get all current accounts.
+This element works also well with the [ethereum:accounts](https://atmospherejs.com/ethereumproject/accounts) package, which provides you with `EthAccounts.find().fetch()` to get all current accounts.
 
 **Setting size**
 
@@ -170,7 +170,7 @@ By passing `class="dapp-large"` you can have a larger version of the select box:
 
 **Show icon**
 
-If you add the `showAccountTypes=true` property it will show a key unicode icon for all accounts with the `type='account'` property (set for `EthAccounts` accounts). 
+If you add the `showAccountTypes=true` property it will show a key unicode icon for all accounts with the `type='account'` property (set for `EthAccounts` accounts).
 
 ```html
 {{> dapp_selectAccount accounts=myAccounts showAccountTypes=true}}
@@ -193,7 +193,7 @@ TemplateVar.getFrom('.my-container-element .dapp-select-account', 'value');
 
 ### Gas price selection
 
-![select gas price](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
+![select gas price](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/selectGasPrice.png?1)
 
 
 This element allows you users to adjust the fee (gas * gas price) of a transaction, and gives you back either the `gasInWei` or the selected `gasPrice`.
@@ -203,7 +203,7 @@ and the tool will display whats the current medium gas price based on the given 
 
 The user then can adjust the fee up and down by a factor of ~1.8.
 
-*Hint*: To get the gas price reactivly you can use the [ethereum:blocks](https://atmospherejs.com/ethereum/blocks) package's `EthBlocks.latest.gasPrice` and pass it to the `gasPrice` property.
+*Hint*: To get the gas price reactivly you can use the [ethereum:blocks](https://atmospherejs.com/ethereumproject/blocks) package's `EthBlocks.latest.gasPrice` and pass it to the `gasPrice` property.
 
 
 ```html
@@ -240,7 +240,7 @@ If the `TAPi18n` helper is available it will use `TAPi18n.__('elements.selectGas
 
 ### Modals
 
-![modal](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/modal.png?2)
+![modal](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/modal.png?2)
 
 Just place a modal placeholder before the closing body tag.
 
@@ -277,7 +277,7 @@ EthElements.Modal.show('myContentTemplate', {
 });
 ```
 
-Navigate to a path on close.  
+Navigate to a path on close.
 This will only work when the [kadira:flow-router](https://atmospherejs.com/kadira/flow-router) or [iron:router](https://atmospherejs.com/iron/router) package is installed:
 
 ```js
@@ -294,14 +294,14 @@ EthElements.Modal.hide();
 
 ### Modal Question
 
-![modal_question](https://raw.githubusercontent.com/ethereum/meteor-package-elements/master/screenshots/modal_question.png?2)
+![modal_question](https://raw.githubusercontent.com/ethereumproject/meteor-package-elements/master/screenshots/modal_question.png?2)
 
 The question modal is a modal content template, which can be used to display a text and allow OK and Cancel options.
 
 You basically just can pass a `text`, `ok` and/or `cancel` property as a data context to set callbacks, which will be fired when the button is pressed.
 
 Additional you can:
-- Set the `ok` or `cancel` property to `true`, it will just close the modal without any action.  
+- Set the `ok` or `cancel` property to `true`, it will just close the modal without any action.
 - Pass `false` or leave the `ok` or `cancel` property empty and it won't show that buttons.
 
 ```js

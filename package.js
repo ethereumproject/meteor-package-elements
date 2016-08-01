@@ -2,7 +2,7 @@ Package.describe({
   name: 'ethereum:elements',
   summary: 'Basic elements for Dapps',
   version: '0.7.3',
-  git: 'http://github.com/ethereum/meteor-package-elements'
+  git: 'http://github.com/ethereumproject/meteor-package-elements'
 });
 
 Package.onUse(function(api) {
@@ -23,7 +23,7 @@ Package.onUse(function(api) {
   api.use('frozeman:animation-helper@0.2.5', 'client');
   api.use('frozeman:storage@0.1.8', 'client');
   api.use('frozeman:template-var@1.2.2', 'client');
-  
+
   // provide packages for the app developer as well
   api.imply(['frozeman:template-var','ethereum:tools'], 'client');
 
