@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'etc:elements',
+  name: 'ethereumclassic:elements',
   summary: 'Basic elements for Dapps',
   version: '0.7.3',
   git: 'http://github.com/ethereumproject/meteor-package-elements'
@@ -18,14 +18,14 @@ Package.onUse(function(api) {
   api.use('3stack:bignumber@2.0.0', 'client');
   // api.use('underscorestring:underscore.string@3.1.1', 'client');
 
-  api.use('etc:web3@0.15.2', 'client');
-  api.use('etc:tools@0.4.0', 'client');
+  api.use('ethereumclassic:web3@0.15.2', 'client');
+  api.use('ethereumclassic:tools@0.4.0', 'client');
   api.use('frozeman:animation-helper@0.2.5', 'client');
   api.use('frozeman:storage@0.1.8', 'client');
   api.use('frozeman:template-var@1.2.2', 'client');
 
   // provide packages for the app developer as well
-  api.imply(['frozeman:template-var','etc:tools'], 'client');
+  api.imply(['frozeman:template-var','ethereumclassic:tools'], 'client');
 
   api.export(['EthElements'], 'client');
 
@@ -63,6 +63,6 @@ Package.onUse(function(api) {
 
 // Package.onTest(function(api) {
 //   api.use('tinytest');
-//   api.use('etc:elements');
+//   api.use('ethereumclassic:elements');
 //   api.addFiles('elements-tests.js');
 // });

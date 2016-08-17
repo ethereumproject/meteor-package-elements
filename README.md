@@ -8,7 +8,7 @@ You can find a [demo here](http://ethereum-elements.meteor.com).
 
 ## Installation
 
-    $ meteor add ethereum:elements
+    $ meteor add ethereumclassic:elements
 
 ## Usage
 
@@ -16,7 +16,7 @@ The following elements can be use anywhere in your dapp.
 
 Additionally this package exposes the following packages:
 
-- [ethereum:tools](https://atmospherejs.com/ethereumproject/tools), which gives you `EthTools`.
+- [ethereumclassic:tools](https://atmospherejs.com/ethereumproject/tools), which gives you `EthTools`.
 - [frozeman:template-var](https://atmospherejs.com/frozeman/template-var), which gives you the `TemplateVar.set()/.get()` functions which can be used to get values from the select account, or address input element.
 
 Note that these packages will only be exposed to your client part of your dapp,
